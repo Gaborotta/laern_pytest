@@ -9,3 +9,9 @@
 [pytest]
 spark_home = /usr/local/spark
 ```
+
+# 実行
+
+```
+pytest -l -v --tb=short --durations=3 -rs --html=report.html --css=style.css --testfile test_1.json
+```
