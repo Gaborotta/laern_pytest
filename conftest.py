@@ -19,7 +19,10 @@ with open('TESTS/{}'.format(args[idx+1])) as f:
 TITLE = setting_df["TITLE"]
 PGM = setting_df["PGM"]
 FILE_NAME = TITLE + '_' + PGM
-
+REPORT_PATH = 'RESULTS/{}_{}.html'.format(
+    FILE_NAME,
+    datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+)
 
 ##############################################
 # フィクスチャ
@@ -65,6 +68,7 @@ def pytest_sessionfinish(session, exitstatus):
     session.config._metadata["02_TARGET_DATE"] = setting_df["TARGET_DATE"]
     session.config._metadata["03_TEST_VERSION"] = setting_df["TEST_VERSION"]
     session.config._metadata["04_PRE_VERSION"] = setting_df["PRE_VERSION"]
+    session.config._metadata["05_REPOT_PATH"] = REPORT_PATH
 
 
 def pytest_html_results_table_header(cells):
@@ -107,7 +111,4 @@ def pytest_runtest_makereport(item, call):
 
 
 def pytest_configure(config):
-    config.option.htmlpath = 'RESULTS/{}_{}.html'.format(
-        FILE_NAME,
-        datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    )
+    config.option.htmlpath = REPORT_PATH
