@@ -1,0 +1,19 @@
+{
+    "TITLE":"マート",
+    "PGM":"01_sakjdksja.py",
+    "TEST_VERSION":"V002",
+    "PRE_VERSION":"V001",
+    "TARGET_DATE":"2021-11",
+    "PATHS":[
+        {
+            "NAME":"aaaa",
+            "TEST_TABLE_PATH":"/sssss/ssss/sss",
+            "PRE_TABLE_PATH":"/rrrrr/rr/rrrr"
+        },
+        {
+            "NAME":"bbb",
+            "TEST_TABLE_PATH":"/sssss/ssss/sss",
+            "PRE_TABLE_PATH":"/rrrrr/rr/rrrr"
+        } 
+    ]   
+}
