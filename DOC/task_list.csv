@@ -1,0 +1,2 @@
+﻿マート名,PGM,A PGM修正,B 対象期間のマート作成（実行）,C マート本体のテストを実行,D 深堀テストを実行（CがNGだった場合。そうでなければそのままClose）,E テスト結果の判定、次回テストの要否確認・内容決定,F IF側の再確認テスト,G PGM再修正,H 対象期間のマート再作成,I マート本体　再テスト,J テスト結果の判定、再々テストの要否確認・内容決定,K レビュー
+AAAA,bbbb.py,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
